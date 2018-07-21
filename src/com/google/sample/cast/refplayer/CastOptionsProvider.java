@@ -29,6 +29,7 @@ import com.google.sample.cast.refplayer.expandedcontrols.ExpandedControlsActivit
 
 import android.content.Context;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -36,6 +37,8 @@ import java.util.List;
  * Implements {@link OptionsProvider} to provide {@link CastOptions}.
  */
 public class CastOptionsProvider implements OptionsProvider {
+
+    public static final String CUSTOM_NAMESPACE = "urn:x-cast:com.connorhenke.elon";
 
     @Override
     public CastOptions getCastOptions(Context context) {

@@ -14,31 +14,103 @@
   See the License for the specific language governing permissions and
   limitations under the License.
   -->
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/list"
-        android:scrollbars="vertical"
+    <EditText
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:id="@+id/name_prompt"
+        android:hint="Enter your name"
+        android:gravity="center"
+        tools:visibility="gone"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content" />
 
-    <ProgressBar
-        android:id="@+id/progress_indicator"
+    <Button
+        android:id="@+id/name_submit_button"
+        android:text="Submit"
+        android:padding="16dp"
+        tools:visibility="gone"
+        android:layout_gravity="center"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:indeterminate="true"
-        style="?android:attr/progressBarStyleLarge" />
+        android:layout_height="wrap_content" />
 
-    <TextView
-        android:id="@+id/empty_view"
+    <Button
+        android:id="@+id/start_button"
+        android:text="Start Game"
+        tools:visibility="gone"
+        android:visibility="visible"
+        android:layout_gravity="center"
+        android:padding="16dp"
+        android:layout_margin="16dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        android:text="@string/no_video_found"
-        android:visibility="gone" />
+        android:layout_height="wrap_content" />
 
-</RelativeLayout>
+    <LinearLayout
+        tools:visibility="visible"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:id="@+id/problem_creator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:id="@+id/problem_prompt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/problem_submit"
+            android:text="Create Problem"
+            android:layout_gravity="center"
+            android:padding="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/elon_holder"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/elon_text"
+            android:text="YOU ARE NOT ELON"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/solution_prompt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/solution_submit"
+            android:text="Create Solution"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/solutions"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </LinearLayout>
+
+
+</LinearLayout>

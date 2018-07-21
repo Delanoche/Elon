@@ -47,4 +47,5 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:25.3.0'
     compile 'com.google.android.gms:play-services-cast-framework:10.2.1'
     compile 'com.googlecode.android-query:android-query:0.25.9'
+    compile 'com.google.code.gson:gson:2.8.5'
 }
